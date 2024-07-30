@@ -1,0 +1,10 @@
+matplotlib
+seaborn
+omegaconf
+scikit-learn
+tqdm==4.66.1
+torch==1.13.0
+torchvision==0.2.2
+torchaudio==0.13.0 
+einops==0.7.0
+timm==0.6.13

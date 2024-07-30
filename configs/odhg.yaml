@@ -1,0 +1,57 @@
+# exp config
+exp_name: 'random_60'
+seed: 0
+dataset: 'odhg'
+save_folder_path: './experiments/'
+device_index: 0
+
+
+# data config
+data:
+ train_data_dir: '/home/these/DATA/Dataset/OMar/Hands Dataset/OnlineDHG_1/training_set/'
+ test_data_dir: '/home/these/DATA/Dataset/OMar/Hands Dataset/OnlineDHG_1/test_set/'
+ step: 1
+ normalize: False
+
+# stmae model config
+stmae:
+ num_joints: 22
+ coords_dim: 3
+ encoder_embed_dim: 256
+ encoder_depth: 6
+ num_heads: 8
+ mlp_dim: 512
+ decoder_dim: 64
+ decoder_depth: 6
+ window_size: 16
+ masking_strategy: 'random'
+ spatial_masking_ratio: 0.6
+ temporal_masking_ratio: 0.6
+ anatomical_loss: True
+ root_index: 0
+ num_epochs: 200
+ lr: 1e-3
+ weight_decay: 0.05
+ batch_size: 128
+
+## offline stgcn model configs
+stgcn_offline:
+ sequence_length: 80
+ task: 'class'
+ num_classes: 14
+ num_epochs: 200
+ lr: 1e-3
+ weight_decay: 0.005
+ batch_size: 8
+ 
+## online stgcn model configs
+stgcn_online:
+ window_size: 16
+ min_seq_length: 80
+ max_seq_length: 10
+ task: 'both'
+ num_classes: 15
+ num_epochs: 30
+ lr: 1e-3
+ weight_decay: 0.005
+ batch_size: 128

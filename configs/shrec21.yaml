@@ -1,0 +1,60 @@
+# exp config
+exp_name: 'random_60'
+seed: 0
+dataset: 'shrec21'
+save_folder_path: './experiments/'
+
+# data config
+data:
+ train_data_dir: '/home/these/DATA/Dataset/OMar/Hands Dataset/SHREC21/training_set/'
+ test_data_dir: '/home/these/DATA/Dataset/OMar/Hands Dataset/SHREC21/test_set/'
+ step: 1
+ normalize: True
+ mean: [0.0360228490, -0.0765615106, 0.4257422931]
+ std: [0.1018783228, 0.0665624935, 0.0807055109]
+ n_joints: 20
+ label_map: ["ONE", "TWO", "THREE", "FOUR", "OK", "MENU", "LEFT", "RIGHT", "CIRCLE",  "V", "CROSS", "GRAB", "PINCH", "TAP", "DENY", "KNOB", "EXPAND", "NON-GESTURE"]            
+ joints_connections: [[0, 1], [1, 2], [2, 3], [0, 4], [4, 5], [5, 6], [6, 7], [0, 8], [8, 9], [9, 10], [10, 11], [0, 12], [12, 13], [13, 14], [14, 15], [0, 16], [16, 17], [17, 18], [18, 19]]
+
+# stmae model config
+stmae:
+ num_joints: 20
+ coords_dim: 3
+ encoder_embed_dim: 256
+ encoder_depth: 6
+ num_heads: 8
+ mlp_dim: 512
+ decoder_dim: 64
+ decoder_depth: 6
+ window_size: 16
+ masking_strategy: 'random'
+ spatial_masking_ratio: 0.6
+ temporal_masking_ratio: 0.6
+ anatomical_loss: True
+ root_index: 0
+ num_epochs: 200
+ lr: 1e-3
+ weight_decay: 0.05
+ batch_size: 128
+
+## offline stgcn model configs
+stgcn_offline:
+ sequence_length: 80
+ task: 'class'
+ num_classes: 17
+ num_epochs: 200
+ lr: 1e-3
+ weight_decay: 0.005
+ batch_size: 8
+ 
+## online stgcn model configs
+stgcn_online:
+ window_size: 16
+ min_seq_length: 80
+ max_seq_length: 10
+ task: 'both'
+ num_classes: 18
+ num_epochs: 30
+ lr: 1e-3
+ weight_decay: 0.005
+ batch_size: 128
