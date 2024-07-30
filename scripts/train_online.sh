@@ -1,1 +1,1 @@
-PYTHONPATH=. python train.py --cfg_path "./configs/shrec21.yaml"
+PYTHONPATH=. python ./scripts/train.py --cfg_path "./configs/shrec21.yaml"
