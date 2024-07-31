@@ -26,11 +26,18 @@ Download the [SHREC'21](https://univr-vips.github.io/Shrec21/) dataset. And set 
 ```
 
 ## **Training**
+- Online training:
 ```
 bash ./scripts/train_online.sh
 ```
 
+- Offline training:
+```
+bash ./scripts/train_offline.sh
+```
+
 ## **Evaluation**
+- Online Evaluation:
 ```
 bash ./scripts/eval.sh
 ```
