@@ -1,4 +1,4 @@
-# AGMAE
+# AG-MAE
 
 AG-MAE: Anatomically Guided Spatio-Temporal Masked Auto-Encoder for Online Hand Gesture Recognition
 
