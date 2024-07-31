@@ -43,4 +43,14 @@ bash ./scripts/eval.sh
 ```
 The predicted results will be stored at `./experiments/shrec21/random_60/results/online_evaluation_results.txt`. The evaluation scores can be calculated using the official code provided by the [Shrec'21](https://univr-vips.github.io/Shrec21/). 
 
+## **Some visual results:**
+- Example of reconstructed window:
+![image](./assets/example_reconstructed_sequence.png)
+
+- Shrec'21 online confusion matrix:
+![image](./assets/shrec21_cm_online.png)
+
+- Shrec'21 offline confusion matrix:
+![image](./assets/shrec21_cm_offline.png)
+
 We thank [MAE](https://github.com/facebookresearch/mae) and [STGCN](https://github.com/yysijie/st-gcn) for making their code available.
