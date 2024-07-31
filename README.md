@@ -45,6 +45,10 @@ The predicted results will be stored at `./experiments/shrec21/random_60/results
 
 ## **Some visual results:**
 - Example of reconstructed window:
+![image](./assets/.png)
+
+
+- Example of predictions:
 ![image](./assets/example_reconstructed_sequence.png)
 
 - Shrec'21 online confusion matrix:
