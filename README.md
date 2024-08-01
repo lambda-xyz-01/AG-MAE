@@ -5,8 +5,7 @@ AG-MAE: Anatomically Guided Spatio-Temporal Masked Auto-Encoder for Online Hand 
 ![image](./assets/stmae-approach.jpg)
 
 ## **Updates**
-- ...
-
+- Trained models available soon !
   
 ## **Installation**
 - Create and activate conda environment:
